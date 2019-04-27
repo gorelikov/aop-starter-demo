@@ -15,18 +15,18 @@ public class JavaServiceApplication {
     @PostConstruct
     public void init() {
         exerciseRepository.saveAll(Arrays.asList(
-                ExerciseEntity.builder().exercise(Exercise.builder()
+                ExerciseEntity.builder()
                         .question("Последняя версия Java")
                         .answer("12 beta 128")
-                        .build()).build(),
-                ExerciseEntity.builder().exercise(Exercise.builder()
+                        .build(),
+                ExerciseEntity.builder()
                         .question("Размер инта")
                         .answer(String.valueOf(Integer.MAX_VALUE))
-                        .build()).build(),
-                ExerciseEntity.builder().exercise(Exercise.builder()
+                        .build(),
+                ExerciseEntity.builder()
                         .question("String Spring Swing — кто лишний?")
                         .answer("Никто")
-                        .build()).build()
+                        .build()
         ));
     }
 

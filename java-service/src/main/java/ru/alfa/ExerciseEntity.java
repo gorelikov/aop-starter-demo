@@ -1,16 +1,15 @@
 package ru.alfa;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import lombok.experimental.Delegate;
 import ru.alfa.boot.demo.Exercise;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Transient;
+import javax.persistence.*;
 
+import static javax.persistence.AccessType.FIELD;
+import static javax.persistence.AccessType.PROPERTY;
+
+@Data
 @Entity
 @Builder
 @NoArgsConstructor
@@ -18,11 +17,8 @@ import javax.persistence.Transient;
 public class ExerciseEntity  {
     @Id
     @GeneratedValue
-    Long aLong;
+    private Long aLong;
 
-    @Delegate
-    @Transient
-    Exercise exercise = new Exercise();
-
-
+    private String question;
+    private String answer;
 }
