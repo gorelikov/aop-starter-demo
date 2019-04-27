@@ -1,4 +1,4 @@
-package ru.alfa.starter;
+package ru.alfabank.aop.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 
