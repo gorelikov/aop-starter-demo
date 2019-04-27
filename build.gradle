@@ -19,7 +19,8 @@ subprojects {
 
     dependencies {
         [
-                enforcedPlatform('org.springframework.boot:spring-boot-dependencies:2.1.3.RELEASE')
+                enforcedPlatform('org.springframework.boot:spring-boot-dependencies:2.1.3.RELEASE'),
+                platform('org.junit:junit-bom:5.4.1')
         ].each {
             implementation it
             annotationProcessor it
@@ -46,6 +47,22 @@ subprojects {
             testCompileOnly it
             annotationProcessor it
             testAnnotationProcessor it
+        }
+
+        testImplementation 'org.mockito:mockito-core',
+                'org.mockito:mockito-junit-jupiter',
+                'org.junit.jupiter:junit-jupiter-engine',
+                'org.springframework.boot:spring-boot-starter-test'
+    }
+
+    test {
+        useJUnitPlatform()
+        testLogging {
+            exceptionFormat = 'full'
+            events 'passed', 'skipped', 'failed'
+        }
+        reports {
+            html.enabled = true
         }
     }
 }
