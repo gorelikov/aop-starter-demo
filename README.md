@@ -1,0 +1,1 @@
+# Just a demo project to show AOP and spring starter features
