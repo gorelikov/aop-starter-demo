@@ -9,3 +9,4 @@ rootProject.name = 'aop-demo'
 
 include 'super-duper-starter'
 include 'super-duper-service'
+include 'common'
