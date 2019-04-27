@@ -6,3 +6,4 @@ aop:
 logging:
   level:
     web: debug
+

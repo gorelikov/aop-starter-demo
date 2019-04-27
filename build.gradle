@@ -27,7 +27,8 @@ subprojects {
             testAnnotationProcessor it
         }
 
-        implementation 'org.springframework.boot:spring-boot-starter-aop'
+        implementation 'org.springframework.boot:spring-boot-starter-aop',
+                'org.springframework.boot:spring-boot-starter-actuator'
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
         testImplementation 'junit:junit:4.12'
 

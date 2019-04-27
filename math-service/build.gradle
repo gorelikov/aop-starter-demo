@@ -1,0 +1,7 @@
+apply plugin: 'org.springframework.boot'
+
+dependencies {
+    implementation project(':super-duper-starter'),
+            'org.springframework.boot:spring-boot-starter-webflux',
+            project(':common')
+}

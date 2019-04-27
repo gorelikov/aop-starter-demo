@@ -1,0 +1,5 @@
+exams:
+  urls:
+    math: http://localhost:8081
+    java: http://localhost:8082
+

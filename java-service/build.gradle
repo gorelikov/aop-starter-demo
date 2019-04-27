@@ -1,0 +1,10 @@
+apply plugin: 'org.springframework.boot'
+
+dependencies {
+    implementation project(':super-duper-starter'),
+            project(':common'),
+            'org.springframework.boot:spring-boot-starter-webflux',
+            'org.springframework.boot:spring-boot-starter-data-jpa',
+            'org.springframework.boot:spring-boot-starter-data-rest',
+            'com.h2database:h2:1.4.197'
+}
