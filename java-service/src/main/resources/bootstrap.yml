@@ -8,3 +8,8 @@ server:
 spring:
   application:
     name: java
+  cloud:
+    config:
+      discovery:
+        service-id: configserver
+        enabled: true

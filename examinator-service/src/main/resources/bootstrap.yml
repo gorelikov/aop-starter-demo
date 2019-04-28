@@ -2,18 +2,26 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:9090/eureka/
+    registry-fetch-interval-seconds: 2
+
   instance:
     instance-id: ${spring.application.name}:${random.value}
+
 
 server:
   port: 0
 spring:
   application:
     name: examinator
+  cloud:
+    config:
+      discovery:
+        service-id: configserver
+        enabled: true
 
 management:
   endpoints:
-    jmx:
+    web:
       exposure:
         include: '*'
   endpoint:

@@ -10,3 +10,14 @@ server:
 spring:
   application:
     name: math
+  cloud:
+    config:
+      discovery:
+        service-id: configserver
+        enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

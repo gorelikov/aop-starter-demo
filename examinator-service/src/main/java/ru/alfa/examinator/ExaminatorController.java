@@ -26,7 +26,10 @@ public class ExaminatorController {
         return Exam.builder()
                 .sections(
                         plan.entrySet().stream()
-                                .map(stringIntegerEntry -> fetchExamSections(stringIntegerEntry.getKey(), stringIntegerEntry.getValue()))
+                                .map(stringIntegerEntry ->
+                                        fetchExamSections(
+                                                stringIntegerEntry.getKey(),
+                                                Math.min(stringIntegerEntry.getValue(), examinatorProperties.getMaxSections())))
                                 .collect(Collectors.toList())
                 )
                 .build();

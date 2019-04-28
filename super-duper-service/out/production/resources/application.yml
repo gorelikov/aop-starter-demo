@@ -1,9 +1,0 @@
-aop:
-  emails:
-    - test
-    -
-
-logging:
-  level:
-    web: debug
-

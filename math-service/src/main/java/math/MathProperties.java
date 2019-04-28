@@ -1,4 +1,4 @@
-package ru.alfa.examinator;
+package math;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -8,8 +8,7 @@ import java.util.Map;
 
 @RefreshScope
 @Data
-@ConfigurationProperties(prefix = "exams")
-public class ExaminatorProperties {
-    private Map<String, String> urls;
+@ConfigurationProperties(prefix = "math")
+public class MathProperties {
     private Integer maxSections;
 }
