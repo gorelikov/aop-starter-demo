@@ -6,5 +6,6 @@ dependencies {
             'org.springframework.boot:spring-boot-starter-webflux',
             'org.springframework.boot:spring-boot-starter-data-jpa',
             'org.springframework.boot:spring-boot-starter-data-rest',
+            'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client',
             'com.h2database:h2:1.4.197'
 }

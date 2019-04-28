@@ -13,4 +13,5 @@ include 'common'
 include 'examinator-service'
 include 'math-service'
 include 'java-service'
+include 'service-registry'
 
