@@ -2,6 +2,8 @@ package ru.alfa.examinator;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,7 +35,7 @@ public class ExaminatorController {
 
     private Section fetchExamSections(String sectionName, Integer count) {
         return restTemplate.getForObject(
-                resolveEndpoint(sectionName) + "/sections?random=" + count,
+                "http://"+sectionName + "/sections?random=" + count,
                 Section.class
         );
     }

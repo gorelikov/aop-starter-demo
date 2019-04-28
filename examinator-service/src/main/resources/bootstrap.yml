@@ -10,3 +10,12 @@ server:
 spring:
   application:
     name: examinator
+
+management:
+  endpoints:
+    jmx:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: "ALWAYS"
