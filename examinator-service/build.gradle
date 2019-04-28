@@ -5,5 +5,6 @@ dependencies {
             'org.springframework.boot:spring-boot-starter-webflux',
             'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client',
             'org.springframework.cloud:spring-cloud-starter-config',
+            'org.springframework.cloud:spring-cloud-starter-bus-amqp',
             project(':common')
 }

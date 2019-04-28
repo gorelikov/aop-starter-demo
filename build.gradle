@@ -50,6 +50,8 @@ subprojects {
             annotationProcessor it
             testAnnotationProcessor it
         }
+        
+        implementation 'org.springframework.cloud:spring-cloud-starter-bus-amqp'
 
         testImplementation 'org.mockito:mockito-core',
                 'org.mockito:mockito-junit-jupiter',

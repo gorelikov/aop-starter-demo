@@ -8,5 +8,6 @@ dependencies {
             'org.springframework.boot:spring-boot-starter-data-rest',
             'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client',
             'org.springframework.cloud:spring-cloud-starter-config',
+            'org.springframework.cloud:spring-cloud-starter-bus-amqp',
             'com.h2database:h2:1.4.197'
 }
